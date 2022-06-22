@@ -1,2 +1,2 @@
-# Skincare
-![Skincare](https://github.com/Edanriell/oldProjects-2/blob/master/AnimatedText/skincare.png?raw=true)
+# Yoga
+![Yoga](https://github.com/Edanriell/Yoga/blob/master/yoga.png?raw=true)
