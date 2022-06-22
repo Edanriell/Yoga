@@ -1,0 +1,182 @@
+#FreeLessonModal
+  top: 25%
+.Modal
+  position: fixed
+  top: 15%
+  left: 36%
+  transform: translate(-50%, -50%)
+  background: #FFFFFF
+  box-shadow: 0px 4px 25px rgb(142 128 169 / 20%)
+  box-sizing: border-box
+  color: #000
+  font-family: inherit
+  border-radius: 10px
+  &-Wrapper
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,.7)
+    z-index: 4
+    font-family: inherit
+    display: none
+.ModalForm
+  padding: 80px 40px 20px 40px
+  box-sizing: border-box
+  width: 550px
+  height: 620px
+  &_size_small
+    width: 450px
+    height: 380px
+  &-Header
+    margin: 0 auto
+    font-family: inherit
+    font-style: normal
+    font-weight: 900
+    font-size: 2rem
+    line-height: 1
+    letter-spacing: 1px
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    align-items: center
+    user-select: none
+    &_size_small
+      margin-bottom: 40px
+  &-Paragraph
+    margin: 0 auto
+    font-family: inherit
+    font-style: normal
+    font-weight: 900
+    font-size: 1.5rem
+    line-height: 1
+    letter-spacing: 1px
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    align-items: center
+    user-select: none
+    margin-top: 10px
+    margin-bottom: 40px
+  &-ButtonWrapper
+    margin-top: 73px
+    position: relative
+    display: flex
+    justify-content: center
+    box-shadow: 0px 4px 25px rgb(142 128 169 / 20%)
+  &-Button
+    user-select: none
+  &-FormGroup
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  &-Field
+    display: flex
+    flex-direction: column
+  &-FieldRow
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &-Label
+    font-size: 1.6rem
+    line-height: 2.5
+    letter-spacing: 0.8px
+    pointer-events: none
+    user-select: none
+  &-Input
+    border-bottom: 1px solid #cccccc
+    transition: all 0.25s linear
+    outline: none
+    font-size: 1.4rem
+    &:hover
+      border-bottom: 1px solid #8E80A9
+    &:focus
+      border-bottom: 1px solid #766a8d
+.NameInput
+.SurnameInput
+  width: 200px
+.AddressInput
+.PhoneInput
+.EmailInput
+.MessageInput
+  width: 100%
+.SummOfOrderInput
+  width: 100px
+  margin-left: 20px
+  pointer-events: none
+.NameField
+.SurnameField
+.AddressField
+  margin-top: 38px
+.EmailField
+  margin-top: 6px
+.PhoneField
+  margin-top: 6px
+.MessageField
+  margin-top: 6px
+  margin-bottom: 54px
+.SelectField
+  margin-top: 38px
+.SummOfOrderField
+  margin-top: 38px
+.CloseModalBtn
+  position: absolute
+  top: 24px
+  right: 33px
+  width: 30px
+  height: 30px
+  background: no-repeat url("../img/modal/close-modal.svg") center
+  transition: all 0.25s ease-in-out
+  cursor: pointer
+  &:hover
+    background: no-repeat url("../img/modal/close-modal-red.svg") center
+    transform: rotate(-180deg) scale(1.2)
+.ModalButton
+  width: 100% !important
+  border-radius: 10px
+.ModalFadeIn
+  animation: ModalFadeIn 0.3s linear both
+@keyframes ModalFadeIn 
+  0% 
+    transform: perspective(800px) translateZ(-80px)
+    opacity: 0
+  100% 
+    transform: perspective(800px) translateZ(0)
+    opacity: 1
+.ModalFadeOut
+  animation: ModalFadeOut 0.15s linear both
+@keyframes ModalFadeOut 
+  0% 
+    transform: perspective(800px) translateZ(0)
+    opacity: 1
+  100% 
+    transform: perspective(800px) translateZ(-80px)
+    opacity: 0
+.fade-out 
+  -webkit-animation: fade-out 0.15s ease-out both
+  animation: fade-out 0.15s ease-out both
+@-webkit-keyframes fade-out 
+  0% 
+    opacity: 1
+  100% 
+    opacity: 0
+@keyframes fade-out 
+  0% 
+    opacity: 1
+  100% 
+    opacity: 0
+.fade-in 
+  -webkit-animation: fade-in 0.3s ease-in-out both
+  animation: fade-in 0.3s ease-in-out both
+@-webkit-keyframes fade-in 
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+@keyframes fade-in 
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1

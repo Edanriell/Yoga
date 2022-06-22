@@ -1,0 +1,105 @@
+=fixImageBug
+  vertical-align: middle
+
+.Team
+  position: relative
+  &-Wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+.TeamSlider
+  align-self: self-start
+.TeamMembersList
+  margin-top: 60px
+  &-Item
+    widt: 1010px
+    height: 335px !important
+    background: #FFFFFF
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2)
+.TeamMember
+  display: flex
+  &-ImageWrapper
+  &-Image
+    width: 335px
+    height: 335px
+    object-fit: cover
+    +fixImageBug
+  &-MainInfo
+    width: 100% // For slider
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 30px 30px 20px 30px
+  &-AdvancedInfo
+    font-size: 1.2rem
+    color: rgba(142, 128, 169, 1)
+    &:nth-of-type(1)
+      max-width: 558px
+    &:nth-of-type(2)
+      max-width: 434px
+    &:nth-of-type(3)
+      max-width: 390px
+.BasicTeamMemberInfo
+  display: flex
+  justify-content: space-between
+  &-MemberName
+    font-family: "AbhayaLibre-Bold"
+    font-style: normal
+    font-weight: 700
+    font-size: 1.8rem
+    color: rgba(142, 128, 169, 1)
+  &-MemberExperience
+    display: flex
+  &-MemberWorkExperience
+    font-size: 1.4rem
+    color: rgba(230, 92, 123, 1)
+    margin-right: 5px
+  &-MemberWorkExperienceYears
+    font-size: 1.4rem
+    color: rgba(230, 92, 123, 1)
+.TeamMembersSliderControls
+  display: flex
+  align-items: center
+  color: rgba(142, 128, 169, 1)
+  font-size: 1.2rem
+  margin-top: 5px
+  &-PrevTeamMember
+    transform: rotate(-180deg)
+  &--NextTeamMember
+  &-CurrentSlide
+    font-size: 1.6rem
+    margin-right: 5px
+  &-TotalSlides
+    font-size: 1.2rem
+    margin-left: 3px
+  &-Pagination
+    padding-left: 20px
+    padding-right: 20px
+.FullTeamMemberList
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  max-width: 435px
+  margin-top: 30px
+  &-Item
+    margin-right: 30px
+    overflow: hidden
+    &:nth-child(3n)
+      margin-right: 0  
+  &-Image
+    width: 125px
+    height: 125px
+    object-fit: cover
+    +fixImageBug
+    cursor: pointer
+    transition: all 0.15s ease-in-out
+    filter: brightness(90%)
+    &:hover
+      transform: scale(1.4)
+      filter: brightness(120%)
+.TeamSlider
+  overflow: hidden // For slider
+  height: 420px !important // For slider
+  width: 1010px  // Slider width in design
+  margin: 0 auto // For slider
+  padding-right: 25px // For slider

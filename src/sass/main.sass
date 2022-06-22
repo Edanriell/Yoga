@@ -1,0 +1,201 @@
+@import ~normalize.css
+@import "./fonts/montserrat"
+@import "./fonts/caveat"
+@import "./fonts/abhayaLibre"
+@import "header"
+@import "promo"
+@import "yogaTypes"
+@import "subscriptions"
+@import "team"
+@import "gallery"
+@import "reviews"
+@import "contacts"
+@import "feedback"
+@import "footer"
+@import "imageGallery"
+@import "modal"
+@import "scroll"
+@import "notification"
+
+*
+  padding: 0
+  margin: 0
+html
+  font-size: 62.5%
+  scroll-behavior: smooth
+ul,li
+  list-style: none
+h1,h2,h3,h4,h5,h6
+  margin: 0
+a
+  color: inherit
+  text-decoration: none
+button,input
+  border: none
+  background-color: transparent
+address
+  font-style: normal
+body
+  font-family: "Montserrat-Medium"
+  font-style: normal
+  font-weight: 500
+  font-size: 1.6rem
+  line-height: 20px
+  color: #8B7EAC
+  background-image: url("../img/main-image.png"), url("../img/yoga-types-section-background.png"), url("../img/subscription-section-background-image.png"), url("../img/team-section-background-image.png"), url("../img/footer-section-background-image.png")
+  background-position: top center, 70% 1000px, 0px 1500px, left 2160px, 0 4384px
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat
+  background-size: 100%, 1224px 903px, 100%, 1194px 1326px, 100% 475px
+.VisuallyHidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+.Container
+  width: 1160px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 0 auto
+.ContainerSmall
+  width: 1010px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 0 auto
+.ContainerMedium
+  width: 1030px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 0 auto
+.Button
+  display: inline-block
+  cursor: pointer
+  position: relative
+  &-Wrapper
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    margin: 0 auto
+    position: relative
+  &-Wrapper2
+    position: relative
+  &_backgroundColor_pink
+    &::before
+      content: ""
+      position: absolute
+      width: 56px
+      height: 48px
+      top: 50%
+      transform: translateY(-50%)
+      left: -66px
+      background-color: #E65C7B
+      margin-right: 10px
+      transition: all 0.25s ease-in-out
+      background: no-repeat url("../img/icons/arrow-white.svg") 25px 15px #E65C7B
+      z-index: -2
+    &:hover::before  
+      background-color: #b94962
+      width: 300px
+  &_backgroundColor_purple // understand how it works
+    width: 45px
+    height: 30px
+    background: rgba(142, 128, 169, 1)
+    transition: all 0.25s ease-in-out
+    position: relative
+    &:hover
+      background: #6b627e
+      &:after
+        transition: 400ms cubic-bezier(0.165, 0.84, 0.44, 1)
+        transform: translateX(15px)
+        opacity: 0
+      &:before
+        transition: 700ms cubic-bezier(0.165, 0.84, 0.44, 1)
+        transform: translateX(0)
+        opacity: 1
+      // background: no-repeat url("../img/icons/arrow-white-small.svg") 58% 50% #766a8d
+    &:before, &:after
+      background: no-repeat url("../img/icons/arrow-white-small.svg") 50% 50% transparent
+      content: ""
+      width: 45px
+      height: 30px
+      position: absolute
+      right: 0
+      top: 0
+    &:before
+      transform: translateX(-15px)
+      opacity: 0
+    &:after
+      transform: none
+  &_backgroundColor_transparent
+    width: 45px
+    height: 30px
+    background: no-repeat url("../img/icons/arrow-white-small-purple.svg") 50% 50% transparent
+    border: 1px solid #8E80A9
+    transition: all 0.25s ease-in-out
+  &_backgroundColor_pinkWide
+    width: 407px
+    height: 56px
+    background-color: rgba(230, 92, 123, 1)
+    font-size: 1.4rem
+    color: rgba(255, 255, 255, 1)
+    transition: all 0.25s ease-in-out
+    &:hover
+      background-color: #b94962
+  &_size_bigPurple
+    width: 223px
+    height: 52px
+    font-size: 1.2rem
+    color: rgba(255, 255, 255, 1)
+    background: #8E80A9
+    transition: all 0.25s ease-in-out
+    &:hover
+      background: #766a8d
+  &_textColor_pink
+    font-family: "Montserrat-SemiBold"
+    font-style: normal
+    font-weight: 600
+    font-size: 1.4rem
+    width: 210px
+    height: 48px
+    text-align: left
+    color: rgba(230, 92, 123, 1)
+    transition: all 0.25s ease-in-out
+    &:hover
+      color: rgba(255, 255, 255, 0.9)
+.SectionOrder
+  position: absolute
+  right: 0
+  top: 50%
+  transform: translateY(-50%)
+  display: flex
+  align-items: center
+  &_color_purple
+    > p
+      color: rgba(174, 164, 200, 0.5)
+    > div
+      background-color: rgba(139, 126, 172, 0.73)
+  &-Number
+    font-family: "AbhayaLibre-Bold"
+    font-style: normal
+    font-weight: 700
+    color: rgba(255, 255, 255, 0.5)
+    font-size: 3rem
+    line-height:15px
+    margin-right: 15px
+  &-Bar
+    width: 56px
+    height: 1px
+    background-color: rgba(255, 255, 255, 0.73)
+.SectionHeader
+  font-family: "AbhayaLibre-Bold"
+  font-style: normal
+  font-weight: 700
+  font-size: 3rem
+  line-height: 15px
+  color: rgba(142, 128, 169, 1)
+  text-align: center

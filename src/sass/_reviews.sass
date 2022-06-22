@@ -1,0 +1,98 @@
+$socialIcons: "../img/icons/vk.svg" 13px 8px 1, "../img/icons/twitter.svg" 15px 10px 2
+
+@each $url, $width, $height, $index in $socialIcons
+  .ReviewerSocialLinksList-Item:nth-child(#{$index})
+    > a
+      display: block
+      background: no-repeat url($url) center transparent
+      width: $width
+      height: $height
+      cursor: pointer
+
+=fixImageBug
+  vertical-align: middle
+
+.Reviews
+  padding-top: 90px
+  padding-bottom: 64px
+  position: relative
+  &-Wrapper
+.CustomerReviews
+  display: flex
+  flex-direction: column
+  align-items: center
+.CustomerReviewsList
+  display: flex
+  width: 914px
+  margin-top: 62px
+  margin-bottom: 26px
+  &-Item
+    background: #FFFFFF
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2)
+.CustomerReview
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  padding: 32px 42px 30px 87px
+  justify-content: space-between
+  width: 442px
+  height: 315px
+.Quote
+  font-size: 1.2rem
+  color: rgba(142, 128, 169, 1)
+  &-Wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    &:before
+      content: ""
+      width: 27px
+      height: 23px
+      background: no-repeat url("../img/icons/quote.svg") center
+      margin-bottom: 20px
+.Reviewer
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  &-Image
+    width: 51px
+    height: 51px
+    object-fit: cover
+    +fixImageBug
+  &-ImageWrapper
+    margin-right: 13px
+.ReviewerInfo
+  dispay: flex
+  flex-direction: column
+  height: 51px
+  max-height: 51px
+  &-Name
+    font-size: 1.2rem
+    line-height: 10px
+    color: rgba(230, 92, 123, 0.7)
+  &-ReviewDate
+    font-size: 1rem
+    line-height: 0px
+    color: rgba(142, 128, 169, 0.7)
+.ReviewerSocialLinksList
+  display: flex
+  flex-wrap: nowrap
+  margin-top: 8px
+  &-Item
+    margin-right: 11px
+    &:last-child
+      margin-right: 0
+  &-Link
+.ReviewsSliderControls
+  width: 120px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  button:nth-child(1)
+    transform: rotate(-180deg)
+.ReviewsSlider
+  overflow: hidden // For slider
+  width: 914px  // Slider width in design
+  margin: 0 auto // For slider
+  padding-right: 15px // For slider
+  padding-left: 15px // For slider

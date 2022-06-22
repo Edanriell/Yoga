@@ -1,0 +1,77 @@
+=fixImageBug
+  vertical-align: middle
+  max-width: 100%
+//   height: auto
+
+.YogaTypes
+  padding-top: 23px
+  padding-bottom: 21px
+  position: relative
+.YogaTypesList
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  align-content: flex-start
+  justify-content: center
+  height: 660px
+  padding-top: 60px
+.ItemCard
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  &_size_big
+    width: 350px
+    height: 400px
+  &_size_normal
+    width: 250px
+    height: 300px
+  &-Wrapper
+    margin-bottom: 30px
+    margin-right: 30px
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2)
+    background: #FFFFFF
+.ItemCardHeader
+  max-height: 250px
+  &-ItemImage
+    object-fit: cover
+    +fixImageBug
+.ItemCardMain
+  display: flex
+  flex-direction: column
+  padding: 20px 20px 15px 20px
+  &-ItemName
+    font-family: "AbhayaLibre-Bold"
+    font-style: normal
+    font-weight: 700
+    line-height: 15px
+    color: rgba(142, 128, 169, 1)
+    margin-bottom: 10px
+.TimeScheduleTable
+  display: flex
+  flex-direction: column
+  &-TableRow
+    display: flex
+  &-WorkingDaysData
+    font-size: 1.2rem
+    color: rgba(142, 128, 169, 1)
+    margin-right: 4px
+  &-WorkingTimeData
+    font-size: 1.2rem
+    color: rgba(142, 128, 169, 1)
+.ItemCardFooter
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-left: 20px
+  padding-right: 20px
+.Teacher
+  display: flex
+  flex-direction: column
+  &-Specialization
+    font-size: 1.2rem
+    line-height: 15px
+    color: rgba(230, 92, 123, 1)
+  &-NameSurname
+    font-size: 1.2rem
+    line-height: 15px
+    color: rgba(230, 92, 123, 1)

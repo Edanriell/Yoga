@@ -1,0 +1,61 @@
+$socialIcons: "../img/icons/vk.svg" 13px 8px 1, "../img/icons/twitter.svg" 12px 8px 2, "../img/icons/facebook.svg" 5px 10px 3
+
+@each $url, $width, $height, $index in $socialIcons
+  .SocialButtons-Item:nth-child(#{$index})
+    > a
+      display: block
+      background: no-repeat url($url) center transparent
+      width: $width
+      height: $height
+      cursor: pointer
+
+.Promo
+  background-color: transparent
+  display: flex
+  flex-direction: column
+  position: relative
+  padding-top: 58px
+  padding-bottom: 216px
+  &-Header
+    display: flex
+    flex-direction: column
+  &-MainHeader
+    font-size: 26.5rem
+    line-height: normal
+    letter-spacing: 0.2em
+    color: #FFFFFF
+    text-shadow: 0px 0px 50px rgba(123, 121, 161, 0.75)
+    text-transform: uppercase
+    order: -1
+    margin-left: 68px
+  &-Paragraph
+    order: -2
+    font-size: 4.5rem
+    line-height: normal
+    color: rgba(142, 128, 169, 1)
+    font-family: "Caveat-Regular"
+    font-style: normal
+    font-weight: 400
+    margin-left: 85px
+  &-Footer
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    padding-top: 139px
+  &-FooterParagraph
+    font-size: 1.6rem
+    line-height: 15px
+    color: rgba(139, 126, 172, 1)
+.SocialButtons
+  display: flex
+  max-width: 75px 
+  flex-wrap: wrap
+  justify-content: flex-start 
+  &-Item
+    margin-right: 10px
+    transition: all 0.15s ease-in-out
+    &:hover
+      transform: scale(1.6)
+    &:last-child
+      margin-right: 0
+  &-Link
